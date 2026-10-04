@@ -52,50 +52,57 @@ header {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 800;
   letter-spacing: -0.5px;
 }
 
 .nav-links {
   display: flex;
-  gap: 40px;
-  font-size: 0.95rem;
+  gap: 30px;
+  font-size: 1rem;
   font-weight: 500;
 }
 
+/* Nav underline effect */
 .nav-links a {
   position: relative;
+  padding-bottom: 5px;
   transition: var(--transition);
 }
-
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--white);
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after, .nav-links a.active::after {
+  width: 100%;
+}
 .nav-links a:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .nav-icons {
   display: flex;
   align-items: center;
   gap: 20px;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-.profile-img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background-color: var(--white);
-  color: var(--primary-green);
+.nav-icons a {
   display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  gap: 8px;
+  transition: var(--transition);
 }
-
-.profile-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.nav-icons a:hover {
+  opacity: 0.8;
 }
 
 /* Hero Section */
@@ -106,11 +113,10 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 120px 50px 0; /* space for bottom banner */
+  padding: 120px 50px 0;
   overflow: hidden;
 }
 
-/* Farm background overlay */
 .hero-bg-image {
   position: absolute;
   top: 0;
@@ -205,17 +211,44 @@ header {
   position: relative;
 }
 
-.tractor-image {
-  max-width: 600px;
+/* Image Slider inside Hero Right */
+.hero-slider {
+  position: relative;
   width: 100%;
-  transform: rotate(5deg);
-  border-radius: 20px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+  max-width: 600px;
+  height: 450px;
+  transform: rotate(3deg);
   transition: transform 0.5s ease;
 }
 
-.tractor-image:hover {
-  transform: rotate(0deg) scale(1.05);
+.hero-slider:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.hero-slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+  opacity: 0;
+  animation: slideFade 15s infinite;
+}
+
+/* Delay for each image to create a continuous loop */
+.hero-slider img:nth-child(1) { animation-delay: 0s; }
+.hero-slider img:nth-child(2) { animation-delay: 5s; }
+.hero-slider img:nth-child(3) { animation-delay: 10s; }
+
+@keyframes slideFade {
+  0% { opacity: 0; transform: scale(1.05); }
+  5% { opacity: 1; transform: scale(1); }
+  33% { opacity: 1; transform: scale(1); }
+  38% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 0; }
 }
 
 /* Bottom Banner */
@@ -256,10 +289,14 @@ header {
 
 .banner-bg-img {
   position: absolute;
-  right: -50px;
-  bottom: -50px;
-  width: 250px;
-  opacity: 0.5;
+  right: -20px;
+  bottom: -20px;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  opacity: 0.9;
+  border-radius: 20px;
+  box-shadow: -10px -10px 30px rgba(0,0,0,0.05);
 }
 
 .banner-center {
@@ -345,5 +382,5 @@ header {
   .hero-content { flex-direction: column; text-align: center; gap: 40px; }
   .hero-action { flex-direction: column; }
   .check-badge { display: none; }
-  .tractor-image { max-width: 90%; }
+  .hero-slider { max-width: 90%; height: 300px; }
 }
