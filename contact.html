@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TractorHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: var(--bg-light);">
+
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="nav-left">
+                <a href="index.html">Products <i class="fa-solid fa-angle-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                <a href="catalogs.html">Customers</a>
+                <a href="about.html">Careers</a>
+            </div>
+            
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-tractor"></i> TractorHub
+            </a>
+            
+            <div class="nav-right">
+                <a href="#" class="sign-in">Sign in</a>
+                <a href="contact.html" class="btn-demo">See a demo &rarr;</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div style="background-color: var(--primary-color); color: white; padding: 60px 0; text-align: center;">
+        <div class="container">
+            <h1 style="margin-bottom: 0;">Contact Us</h1>
+            <p style="color: #cbd5e1; margin-top: 10px;">Get in touch for catalog details and expert consultation</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Let's Discuss Your Machinery Needs</h2>
+                    <p style="margin-bottom: 40px;">Whether you want to request a detailed catalog or need expert advice on which tractor series suits your agricultural needs, our team is here to help.</p>
+                    
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Our Office</h4>
+                            <p>123 Agriculture Ave, Farming City, FC 45678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567<br>Mon-Fri, 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@tractorhub.com<br>sales@tractorhub.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you for contacting us! We will get back to you soon.');">
+                        <div class="form-group">
+                            <label for="name" style="display:block; margin-bottom:8px; font-weight:600;">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" style="display:block; margin-bottom:8px; font-weight:600;">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" style="display:block; margin-bottom:8px; font-weight:600;">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="+1 (555) 000-0000">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" style="display:block; margin-bottom:8px; font-weight:600;">Your Message / Catalog Request</label>
+                            <textarea id="message" class="form-control" placeholder="Tell us which tractor series you are interested in..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Tractor<span>Hub</span></div>
+                    <p class="footer-text">Empowering agriculture and industry with reliable information and top-tier tractor catalogs.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="catalogs.html">Catalogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i> 123 Agriculture Ave, Farming City</li>
+                        <li><i class="fa-solid fa-phone" style="margin-right: 10px;"></i> +1 (555) 123-4567</li>
+                        <li><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i> info@tractorhub.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TractorHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
